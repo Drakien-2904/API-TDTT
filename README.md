@@ -140,9 +140,12 @@ POST /generate
 ```json
 {
   "input_text": "New York (CNN) When Liana Barrientos was 23 years old, she got married in Westchester County, New York...",
-  "summary": "Artificial intelligence is transforming industries by enabling machines to learn patterns from data and make automated decisions."
+  "summary": "Liana Barrientos got married five times in Westchester County, New York.."
 }
 ```
+
+##7.4 Cách để dừng server Uvicorn
+Dùng tổ hợp phím Ctrl + C trong terminal để dừng chương trình
 
 ---
 
