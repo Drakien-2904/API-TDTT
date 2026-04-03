@@ -1,12 +1,19 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+import torch
+
+# Chọn device: GPU nếu có, không thì CPU
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # Load model (chỉ load 1 lần khi server start)
 model_name = "facebook/bart-large-cnn"
 
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
+
+# Đưa model lên GPU
+model.to(device)
 
 # Khởi tạo FastAPI
 app = FastAPI(
@@ -42,13 +49,16 @@ def health():
 def summarize(text):
     inputs = tokenizer(text, return_tensors="pt", truncation=True)
 
-    summary_ids = model.generate(
-        inputs["input_ids"],
-        max_length=200,
-        min_length=10,
-        num_beams=4,
-        forced_bos_token_id=0
-    )
+    # Đưa input tensor lên GPU
+    inputs = {k: v.to(device) for k, v in inputs.items()}
+    with torch.no_grad():
+        summary_ids = model.generate(
+            inputs["input_ids"],
+            max_length=200,
+            min_length=10,
+            num_beams=4,
+            forced_bos_token_id=0
+        )
 
     summary = tokenizer.decode(summary_ids[0], skip_special_tokens=True)
     return summary
