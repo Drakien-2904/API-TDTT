@@ -83,7 +83,7 @@ pip install fastapi uvicorn transformers torch
 
 Di chuyển tới thư mục chứa project.
 
-Sau đó chạy server bằng lệnh:
+Sau đó chạy server trên terminal bằng lệnh:
 
 ```bash
 uvicorn main:app --reload
