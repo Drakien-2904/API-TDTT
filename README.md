@@ -4,7 +4,7 @@
 
 * **Họ và tên:** Đỗ Trung Kiên
 * **Mã số sinh viên:** 24120350
-* **Lớp:** CTT3
+* **Lớp:** 24CTT3
 
 ---
 
