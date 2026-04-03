@@ -148,8 +148,11 @@ POST /generate
 Dùng tổ hợp phím Ctrl + C trong terminal để dừng chương trình
 
 ---
+# 8. Cách để kiếm tra cấu hình GPU có chạy không (Có thể bỏ qua phần này nếu máy bạn không có GPU nvidia mạnh)
+Chạy nvidia-smi -l 1 chạy trong terminal
 
-# 8. Video demo
+---
+# 9. Video demo
 
 Video demo hệ thống sẽ được cập nhật tại đây:
 

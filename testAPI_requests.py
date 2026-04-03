@@ -24,10 +24,7 @@ def test_generate():
     print("Testing POST /generate")
 
     data = {
-        "text": """Artificial intelligence is transforming many industries including healthcare,
-        finance, and education. It allows machines to learn patterns from data and make
-        decisions automatically. Many companies are adopting AI technologies to improve
-        productivity and create new services."""
+        "text": """Artificial Intelligence (AI) technology has become one of the most transformative innovations of the modern era, influencing nearly every industry and aspect of human life. At its core, AI refers to the development of computer systems that can perform tasks traditionally requiring human intelligence, such as understanding language, recognizing images, making decisions, and learning from data. Over the past decade, advances in computing power, the availability of massive datasets, and breakthroughs in machine learning algorithms have significantly accelerated the development of AI systems. One of the most important branches of AI is machine learning, where algorithms learn patterns from data rather than being explicitly programmed."""
     }
 
     response = requests.post(f"{BASE_URL}/generate", json=data)
