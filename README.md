@@ -149,8 +149,12 @@ Dùng tổ hợp phím Ctrl + C trong terminal để dừng chương trình
 
 ---
 # 8. Cách để kiếm tra cấu hình GPU có chạy không (Có thể bỏ qua phần này nếu máy bạn không có GPU nvidia mạnh)
-Chạy nvidia-smi -l 1 chạy trong terminal
+Chạy trong terminal:
 
+```bash
+while ($true) { cls; nvidia-smi; Start-Sleep -Seconds 5 }
+```
+Để dừng chương trình thì cũng dùng tổ hợp phím Ctrl + C
 ---
 # 9. Video demo
 
