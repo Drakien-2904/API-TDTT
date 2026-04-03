@@ -94,13 +94,13 @@ Nếu sử dụng Python launcher:
 ```bash
 py -m uvicorn main:app --reload
 ```
-
+![Terminal Server](Image/Terminal_Server.png)
 Server sẽ chạy tại địa chỉ:
 
 ```
 http://127.0.0.1:8000
 ```
-
+![Server API](Image/Server_API.png)
 ---
 
 # 6. Hướng dẫn gọi API
@@ -112,7 +112,7 @@ http://127.0.0.1:8000/docs
 ```
 
 Đây là giao diện **Swagger UI** để test API trực tiếp.
-
+![Swagger UI](Image/Swagger_UI.png)
 ---
 
 # 7. Ví dụ Request và Response
@@ -126,7 +126,8 @@ POST /generate
 ---
 
 ## 7.2 Request Body
-
+Nhấp vào Try it out --> Điền input Json --> Nhấp execute
+![Try it out](Image/Try_it_out.png) 
 ```json
 {
     "text": "New York (CNN) When Liana Barrientos was 23 years old, she got married in Westchester County, New York.\nA year later, she got married again in Westchester County, but to a different man and without divorcing her first husband.\nOnly 18 days after that marriage, she got hitched yet again. Then, Barrientos declared \"I do\" five more times."
@@ -143,8 +144,9 @@ POST /generate
   "summary": "Liana Barrientos got married five times in Westchester County, New York.."
 }
 ```
+![Response](Image/Response.png) 
 
-##7.4 Cách để dừng server Uvicorn
+## 7.4 Cách để dừng server Uvicorn
 Dùng tổ hợp phím Ctrl + C trong terminal để dừng chương trình
 
 ---
@@ -154,15 +156,10 @@ Chạy trong terminal:
 ```bash
 while ($true) { cls; nvidia-smi; Start-Sleep -Seconds 5 }
 ```
+
 Để dừng chương trình thì cũng dùng tổ hợp phím Ctrl + C
 ---
 # 9. Video demo
-
-Video demo hệ thống sẽ được cập nhật tại đây:
-
-```
-Link video: (Sẽ cập nhật sau)
-```
+[![Watch Demo](Image/Youtube_thumbnail.png)](https://www.youtube.com/watch?v=T8Ke5fnm-ts)
 
 ---
-
