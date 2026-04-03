@@ -94,7 +94,7 @@ Nếu sử dụng Python launcher:
 ```bash
 py -m uvicorn main:app --reload
 ```
-![Terminal Server](Image/Terminal_Server.png)
+![Terminal Server](Image/Terminal_server.png)
 Server sẽ chạy tại địa chỉ:
 
 ```
